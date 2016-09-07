@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ungdung_nhac" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-R4-ROd">
+                                <rect key="frame" x="145" y="229" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1xx-bW-uqE"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="Wln-av-TAg"/>
+                                    <constraint firstAttribute="width" constant="30" id="e2H-hP-4hU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="htF-nV-rwe"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="tR6-0d-xP1"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="xRU-Od-EZn"/>
+                                </constraints>
+                                <state key="normal" image="play.png"/>
+                                <connections>
+                                    <action selector="action_Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHc-4T-acL"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="miniVolume.png" maximumValueImage="maxVolume.png" translatesAutoresizingMaskIntoConstraints="NO" id="wK5-sD-sq8">
+                                <rect key="frame" x="37" y="262" width="247" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.62486535535706023" green="0.33375770387593362" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sld_Volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="QTC-eE-gSC"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wK5-sD-sq8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PDM-7d-pqs"/>
+                            <constraint firstItem="wK5-sD-sq8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W8j-67-9b8"/>
+                            <constraint firstItem="wK5-sD-sq8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fUI-xx-ENQ"/>
+                            <constraint firstItem="wK5-sD-sq8" firstAttribute="top" secondItem="DSZ-R4-ROd" secondAttribute="bottom" constant="8" id="qpG-3b-lm7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wK5-sD-sq8" secondAttribute="trailing" constant="18" id="w7i-tg-YLe"/>
+                            <constraint firstItem="DSZ-R4-ROd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x7v-lc-3M0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Btn_Play" destination="DSZ-R4-ROd" id="J9v-SW-8iE"/>
+                        <outlet property="Sld_Vol" destination="wK5-sD-sq8" id="SPa-6i-HcU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="396"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="maxVolume.png" width="30" height="30"/>
+        <image name="miniVolume.png" width="30" height="30"/>
+        <image name="play.png" width="256" height="256"/>
+    </resources>
+</document>
